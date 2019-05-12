@@ -1,0 +1,29 @@
+<idea-plugin>
+  <id>minman.idea.plugin.importandbuild</id>
+  <name>Import And Build</name>
+  <version>1.0</version>
+  <vendor url="https://github.com/minman/import-and-build">Minas Manthos</vendor>
+
+  <description><![CDATA[
+      Reimport all maven projects and Rebuild<br>
+      For those, updating their project outside IDEA. Create a file named <i>import-and-build.token</i> in project root before IDEA starts.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      1.0 initial release
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="181.0"/>
+
+  <depends>org.jetbrains.idea.maven</depends>
+  
+  <depends>com.intellij.modules.lang</depends>
+
+  <project-components>
+    <component>
+      <implementation-class>minman.idea.plugin.importandbuild.ImportAndBuildProject</implementation-class>
+    </component>
+  </project-components>
+
+</idea-plugin>
